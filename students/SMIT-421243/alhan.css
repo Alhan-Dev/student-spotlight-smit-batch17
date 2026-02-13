@@ -4,6 +4,7 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
 nav{
     display: flex;
     background-color: #46237A;
@@ -11,18 +12,18 @@ nav{
     height: 80px;
     position: fixed;
     z-index: 20;
+    border: 1px solid gray;
 }
 .h1-main-heading{
     margin-top: 20px;
     margin-left: 8px;
     color: #9B76E3;
-    text-decoration: overline;
     font-size: 40px;
     font-style: italic;
 }
 .radius{
     margin-left: 20px;
-    margin-top: 6px;
+    margin-top: 8px;
     border: 1px solid #31145c;
     background-color: #9B76E3;
     border-radius: 70px;
@@ -44,6 +45,7 @@ nav{
     padding:10px;
     text-decoration: none;
     color: white;
+    transition: all 0.5s ease-in-out;
 }
 .a-nav:hover{
     margin: 10px;
@@ -107,26 +109,7 @@ nav{
     100% { transform: translateY(0px); }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .parent-heros-child {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    
-    .text-main {
-        margin-left: 0;
-        margin-top: 20px;
-    }
 
-    .text-main h2 {
-        font-size: 40px;
-    }
-
-    .img-main img {
-        width: 300px;
-    }
-}
 #about{
 background-size: cover;
 height: 700px;
@@ -144,17 +127,20 @@ section{
     margin-bottom: 20px;
     margin-top: 20px;
     color: #46237A;
-    text-decoration: underline;
+            font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+    font-weight: 600; /* 400-normal, 700-bold, 600 semi-bold */
 }
 .img{
     background-color: #6F41C2;
     border: 2px solid #9B76E3;
     border-radius: 1000px;
+    transition: all 0.5s ease-in-out;
 }
 .img:hover{
     background-color: #6F41C2;
     border: 2px solid #9B76E3;
     border-radius: 1000px;
+    transition: all 0.5s ease-in-out;
     transform: translateY(-10);
     transform: scale(1.05);
     box-shadow: 0 20px 40px #31145c;
@@ -167,6 +153,7 @@ section{
     padding: 10px;
     border-radius: 40px;
     margin-top: 30px;
+    transition: all 0.5s ease-in-out;
     margin: 30px;
 }
 .spa:hover{
@@ -179,9 +166,38 @@ section{
     margin-top: 30px;
     margin: 30px;
 }
+.main-btn{
+    width: 30vh;
+    height: 10vh;
+    font-size: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    border: 1px solid #6F41C2;
+    background-color: #46237A;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+.main-btn:hover{
+    width: 30vh;
+    height: 10vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    border: 1px solid #46237A;
+    background-color: #6F41C2;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+.main-btn a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
 .line{
     display: flex;
-        gap: 20px;                 
+    gap: 20px;                 
     overflow-x: auto;          
     scroll-behavior: smooth;   
     border: 1px solid gray;
@@ -192,15 +208,17 @@ section{
     background:linear-gradient(to right,#46237A,#6F41C2);   
 }
 .paragragh{
-margin: 10px;
-padding: 5px;
-border: 1px solid gray;
-background-color: #46237A;
-color: white;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid gray;
+    background-color: #46237A;
+    color: white;
 font-weight: 500;
 font-size: 20px;
+transition: all 0.5s ease-in-out;
 }
 .paragragh:hover{
+    transition: all 0.5s ease-in-out;
 margin: 10px;
 padding: 5px;
 border: 1px solid gray;
@@ -212,11 +230,124 @@ font-size: 20px;
     transform: scale(1.05);
     box-shadow: 0 20px 40px #31145c;
 }
+.h2-cart{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    list-style: disc;
+}
 .s-heading{
     text-align: center;
     margin: 10px;
     font-size: 80px;
     color: #46237A;
-        font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+    font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
     font-weight: 600; /* 400-normal, 700-bold, 600 semi-bold */
+}
+.icon i {
+    font-size: 120px; /* jitna chaho utna kar lo */
+    margin-top: 50px;
+}
+.text{
+    font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+    font-weight: 600; /* 400-normal, 700-bold, 600 semi-bold */
+    font-size: 40px;
+    margin: 2rem;
+    border-bottom: 5px solid;
+    color: white;
+    text-shadow: 5px 5px 3px #31145c;
+}
+.cart{
+    text-align: center;
+    align-items: center;
+    border: 2px solid;
+    background: linear-gradient(to bottom,#46237A,#6F41C2);
+    width: 300px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 25px;
+    margin: 80px;
+    transition: all 0.5s ease-in-out;
+}
+.cart:hover{
+    text-align: center;
+    align-items: center;
+    border: 2px solid;
+    background: linear-gradient(to bottom,#46237A,#6F41C2);
+    width: 300px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 25px;
+    margin: 80px;
+    transition: all 0.5s ease-in-out;
+       transform: translateY(-10);
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px #31145c;
+}
+.cart-parent{
+    display: flex;
+}
+#services {
+    padding: 80px 50px;
+    background-color: white;
+}
+
+.s-heading {
+    text-align: center;
+    font-size: 60px;
+    color: #46237A;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 60px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.service-card {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    color: #46237A;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Hover effect */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(70,35,122,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .s-heading {
+        font-size: 45px;
+    }
+
+    .service-card {
+        flex: 1 1 100%;
+        max-width: 400px;
+    }
 }
